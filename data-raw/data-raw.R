@@ -219,6 +219,108 @@ load_cancer_hotspots <- function(
             "c.672",
             as.character(amino_acid_position)
         )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X33_splice" &
+                hugo_symbol == "TP53",
+            "c.97-1G,c.97-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X33_splice" &
+                hugo_symbol == "TP53",
+            "c.97",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X332_splice" &
+                hugo_symbol == "TP53",
+            "c.994-1G,c.994-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X332_splice" &
+                hugo_symbol == "TP53",
+            "c.994",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X32_splice" &
+                hugo_symbol == "TP53",
+            "c.96+1G,c.96+2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X32_splice" &
+                hugo_symbol == "TP53",
+            "c.96",
+            as.character(amino_acid_position)
+        )) |>
+
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X114_splice" &
+                hugo_symbol == "VHL",
+            "c.340+1G,c.340+2T,c.341-1G,c.341-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X114_splice" &
+                hugo_symbol == "VHL",
+            "c.340:c.341",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X155_splice" &
+                hugo_symbol == "VHL",
+            "c.463+1G,c.463+2T,c.464-1G,c.464-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X155_splice" &
+                hugo_symbol == "VHL",
+            "c.463:c.464",
+            as.character(amino_acid_position)
+        )) |>
+
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X342_splice" &
+                hugo_symbol == "PTEN",
+            "c.1026+1G,c.1026+2T",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X342_splice" &
+                hugo_symbol == "PTEN",
+            "c.1026",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X267_splice" &
+                hugo_symbol == "PTEN",
+            "c.801+1G,c.801+2T",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X267_splice" &
+                hugo_symbol == "PTEN",
+            "c.801",
+            as.character(amino_acid_position)
+        )) |>
+
+
         dplyr::mutate(hgvsc = dplyr::if_else(
             amino_acid_position == "X1010_splice" &
                 hugo_symbol == "MET",
@@ -243,6 +345,32 @@ load_cancer_hotspots <- function(
             amino_acid_position == "X70_splice" &
                 hugo_symbol == "PTEN",
             "c.209:c.210",
+            as.character(amino_acid_position)
+        )) |>
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X343_splice" &
+                hugo_symbol == "PTEN",
+            "c.1027-1G,c.1027-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X343_splice" &
+                hugo_symbol == "PTEN",
+            "c.1027",
+            as.character(amino_acid_position)
+        )) |>
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X342_splice" &
+                hugo_symbol == "PTEN",
+            "c.1026+1G,c.1026+2T",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X342_splice" &
+                hugo_symbol == "PTEN",
+            "c.1026",
             as.character(amino_acid_position)
         )) |>
         dplyr::mutate(hgvsc = dplyr::if_else(
@@ -414,6 +542,121 @@ load_cancer_hotspots <- function(
             "c.1421:c.1422",
             as.character(amino_acid_position)
         )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X654_splice" &
+                hugo_symbol == "RB1",
+            "c.1960+1G,c.1960+2T,c.1961-1G,c.1961-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X654_splice" &
+                hugo_symbol == "RB1",
+            "c.1960:c.1961",
+            as.character(amino_acid_position)
+        )) |>
+
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X830_splice" &
+                hugo_symbol == "RB1",
+            "c.2489+1G,c.2489+2T,c.2490-1G",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X830_splice" &
+                hugo_symbol == "RB1",
+            "c.2489:c.2490",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X445_splice" &
+                hugo_symbol == "RB1",
+            "c.1333-1G",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X445_splice" &
+                hugo_symbol == "RB1",
+            "c.1333",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X127_splice" &
+                hugo_symbol == "RB1",
+            "c.380+1G,c.381-1G,c.381-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X127_splice" &
+                hugo_symbol == "RB1",
+            "c.380:c.381",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X203_splice" &
+                hugo_symbol == "RB1",
+            "c.607+1G,c.608-1G",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X203_splice" &
+                hugo_symbol == "RB1",
+            "c.607:c.608",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X46_splice" &
+                hugo_symbol == "RB1",
+            "c.137+1G,c.137+2T,c.138-1G,c.138-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X46_splice" &
+                hugo_symbol == "RB1",
+            "c.137:c.138",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X702_splice" &
+                hugo_symbol == "RB1",
+            "c.2106+1G,c.2106+2T",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X702_splice" &
+                hugo_symbol == "RB1",
+            "c.2106",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X605_splice" &
+                hugo_symbol == "RB1",
+            "c.1814+1G,c.1814+2T,c.1815-1G",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X605_splice" &
+                hugo_symbol == "RB1",
+            "c.1814:c.1815",
+            as.character(amino_acid_position)
+        )) |>
+
+
         dplyr::mutate(hgvsc = dplyr::if_else(
             amino_acid_position == "X582_splice" &
                 hugo_symbol == "PIK3R1",
@@ -438,6 +681,45 @@ load_cancer_hotspots <- function(
             amino_acid_position == "X87_splice" &
                 hugo_symbol == "SDHAF2",
             "c.261",
+            as.character(amino_acid_position)
+        )) |>
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X278_splice" &
+                hugo_symbol == "CDH1",
+            "c.832+1G,c.833-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X278_splice" &
+                hugo_symbol == "CDH1",
+            "c.832:c.833",
+            as.character(amino_acid_position)
+        )) |>
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X177_splice" &
+                hugo_symbol == "CDH1",
+            "c.531+1G,c.531+2T",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X177_splice" &
+                hugo_symbol == "CDH1",
+            "c.531",
+            as.character(amino_acid_position)
+        )) |>
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X440_splice" &
+                hugo_symbol == "CDH1",
+            "c.1320+1G",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X440_splice" &
+                hugo_symbol == "CDH1",
+            "c.1320",
             as.character(amino_acid_position)
         )) |>
         dplyr::filter(
