@@ -193,6 +193,7 @@ load_cancer_hotspots <- function(
             "c.782:c.783",
             as.character(amino_acid_position)
         )) |>
+
         dplyr::mutate(hgvsc = dplyr::if_else(
             amino_acid_position == "X125_splice" &
                 hugo_symbol == "TP53",
@@ -206,6 +207,7 @@ load_cancer_hotspots <- function(
             "c.375",
             as.character(amino_acid_position)
         )) |>
+
         dplyr::mutate(hgvsc = dplyr::if_else(
             amino_acid_position == "X224_splice" &
                 hugo_symbol == "TP53",
@@ -516,6 +518,36 @@ load_cancer_hotspots <- function(
             "c.1215",
             as.character(amino_acid_position)
         )) |>
+
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X406_splice" &
+                hugo_symbol == "RB1",
+            "c.1216-1G,c.1216-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X406_splice" &
+                hugo_symbol == "RB1",
+            "c.1216",
+            as.character(amino_acid_position)
+        )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X463_splice" &
+                hugo_symbol == "RB1",
+            "c.1389+1G",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X463_splice" &
+                hugo_symbol == "RB1",
+            "c.1389",
+            as.character(amino_acid_position)
+        )) |>
+
         dplyr::mutate(hgvsc = dplyr::if_else(
             amino_acid_position == "X500_splice" &
                 hugo_symbol == "RB1",
@@ -722,6 +754,21 @@ load_cancer_hotspots <- function(
             "c.1320",
             as.character(amino_acid_position)
         )) |>
+
+        dplyr::mutate(hgvsc = dplyr::if_else(
+            amino_acid_position == "X722_splice" &
+                hugo_symbol == "CDH1",
+            "c.2165-2A",
+            as.character(hgvsc)
+
+        )) |>
+        dplyr::mutate(amino_acid_position = dplyr::if_else(
+            amino_acid_position == "X722_splice" &
+                hugo_symbol == "CDH1",
+            "c.2165",
+            as.character(amino_acid_position)
+        )) |>
+
         dplyr::filter(
             !stringr::str_detect(amino_acid_position,"splice") |
                 (stringr::str_detect(amino_acid_position,"splice") &
@@ -839,9 +886,24 @@ load_cancer_hotspots <- function(
     )
 
 
+    metadata_hotspots <-
+        data.frame(
+            'source' = 'cancerhotspots.org',
+            'source_description' = paste0(
+                'A resource for statistically significant mutations in cancer'),
+            'source_url' = 'https://www.cancerhotspots.org/#/home',
+            'source_citation' = 'Chang et al., Cancer Discov, 2018; 29247016',
+            'source_version' = 'v2',
+            'source_abbreviation' = 'hotspots',
+            'source_license' = 'ODbL v1.0',
+            'source_license_url' = 'https://opendatacommons.org/licenses/odbl/1-0/'
+        )
 
 
-    return(list('wide' = hotspots_wide, 'long' = hotspots_long))
+    return(list(
+        'metadata' = metadata_hotspots,
+        'wide' = hotspots_wide,
+        'long' = hotspots_long))
 
 }
 
