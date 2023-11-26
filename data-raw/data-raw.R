@@ -47,7 +47,7 @@ load_cancer_hotspots <- function(
         df = cancer_hotspots[['indel']], gOncoX = gOncoX) |>
         dplyr::mutate(MUTATION_HOTSPOT = paste0(
             symbol, "|", entrezgene, "|",
-            amino_acid_position, "|",
+            amino_acid_position, "||",
             qvalue)) |>
         dplyr::mutate(MUTATION_HOTSPOT2 = stringr::str_replace_all(
             MUTATION_HOTSPOT, "\\*","X"
