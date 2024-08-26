@@ -326,14 +326,14 @@ load_cancer_hotspots <- function(
         dplyr::mutate(hgvsc = dplyr::if_else(
             amino_acid_position == "X1010_splice" &
                 hugo_symbol == "MET",
-            "c.3028+1G,c.3028+2T",
+            "c.3028+1G,c.3028+2T,c.3082+1G,c.3082+2T",
             as.character(hgvsc)
 
         )) |>
         dplyr::mutate(amino_acid_position = dplyr::if_else(
             amino_acid_position == "X1010_splice" &
                 hugo_symbol == "MET",
-            "c.3028",
+            "c.3028,c.3082",
             as.character(amino_acid_position)
         )) |>
         dplyr::mutate(hgvsc = dplyr::if_else(
