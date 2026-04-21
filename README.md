@@ -1,6 +1,10 @@
 ## cancerHotspots
 
-R data package with mutational hotspots in cancer. The data has been harvested from cancerhotspots.org. Location of each hotspot is provided with HGVSp/HGVSc coordinates. Imporantly, a number of splice site hotspots have been curated with information regarding their relative position with respect to the exon/intron boundary (i.e. HGVSc).
+R data package with mutational hotspots in cancer. The data has been harvested 
+from [cancerhotspots.org](https://www.cancerhotspots.org/#/home). Location of 
+each hotspot is provided with HGVSp/HGVSc coordinates. Imporantly, a number 
+of splice site hotspots have been curated with information regarding their 
+relative position with respect to the exon/intron boundary (i.e. HGVSc).
 
 ### Installation
 
@@ -22,6 +26,8 @@ Metadata (citation, license etc:)
 
 ### Important note
 
-If you use the dataset provided with **cancerHotspots**, make sure you properly cite the original publication:
+If you use the dataset provided with **cancerHotspots**, make sure you properly 
+cite the original publications:
 
 - [Chang et al., Cancer Discov, 2018](https://pubmed.ncbi.nlm.nih.gov/29247016/)
+- [Bandlamudi et al., Cancer Cell, 2026](https://pubmed.ncbi.nlm.nih.gov/41895280/)
